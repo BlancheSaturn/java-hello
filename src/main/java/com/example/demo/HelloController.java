@@ -12,8 +12,8 @@ import java.util.List;
 @CrossOrigin
 @RestController
 public class HelloController {
-@Autowired
-HelloRepository helloRepository;
+    @Autowired
+    HelloRepository helloRepository;
 
 
     @GetMapping("/hello")
@@ -21,9 +21,10 @@ HelloRepository helloRepository;
         return ResponseEntity.status(HttpStatus.OK).body(helloRepository.findAll());
 
     }
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Guten Tag. Wie geht es dir? Ma name is Blanche. ";
-    }
 }
+//    @GetMapping("/hello")
+//    public String sayHello() {
+//        return "Guten Tag. Wie geht es dir? Ma name is Blanche. ";
+//    }
+//}
 
